@@ -37,6 +37,7 @@
     self.view = [[UIView alloc] initWithFrame:CGRectMake(0,0,320,480)];
     self.view.backgroundColor = [UIColor whiteColor];             
 }
+
                  
 - (void)viewDidLoad
 {
