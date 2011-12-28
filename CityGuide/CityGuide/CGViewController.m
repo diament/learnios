@@ -12,7 +12,7 @@
 #import "CityController.h"
 
 @implementation CGViewController
-@synthesize tableView;
+//@synthesize tableView;
 
 - (void)didReceiveMemoryWarning
 {

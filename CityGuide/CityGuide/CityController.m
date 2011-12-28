@@ -34,27 +34,30 @@
 
 - (void) loadView
 {
-    self.view = [[UIView alloc] initWithFrame:CGRectMake(0,0,320,480)];
+    self.view = [[UIView alloc] initWithFrame:CGRectMake(0,0,320,416)];
     self.view.backgroundColor = [UIColor whiteColor];             
-}
 
+    descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(10,10,300,100)];
+    [self.view addSubview:descriptionView];
+
+    pictureView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 120, 300, 286)];
+    [self.view addSubview:pictureView];
+
+}
                  
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     CGAppDelegate *delegate = (CGAppDelegate *) [[UIApplication sharedApplication] delegate];
     City *thisCity = [delegate.cities objectAtIndex:index.row];
     
     self.title = thisCity.cityName;
 
-    descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(10,10,300,100)];
     descriptionView.text = thisCity.cityDescription;
     descriptionView.editable = NO;
-    [self.view addSubview:descriptionView];
     
-    pictureView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 120, 300, 200)];
     pictureView.image = thisCity.cityPicture;
-    [self.view addSubview:pictureView];
 }
 
 - (void)viewDidUnload

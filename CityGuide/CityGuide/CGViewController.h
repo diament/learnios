@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CGViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
+@interface CGViewController : UITableViewController <UITableViewDataSource, UITabBarDelegate>
 {
     NSMutableArray *cities;
 }
-@property (weak, nonatomic) UITableView *tableView;
+//@property (weak, nonatomic) UITableView *tableView;
 
 @end
